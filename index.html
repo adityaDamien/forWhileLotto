@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hoosier Lottery Generator</title>
+</head>
+<body>
+
+  <h2>Lottery Numbers (For Loop)</h2>
+  <h3 id="forNumbers"></h3>
+
+  <h2>Lottery Numbers (While Loop)</h2>
+  <h3 id="whileNumbers"></h3>
+
+  <script>
+    function getRandomNumber() {
+      return Math.floor(Math.random() * 49) + 1;
+    }
+
+    let forNumbers = "";
+    for (let i = 0; i < 6; i++) {
+      let num = getRandomNumber();
+      console.log(num);
+      forNumbers += num + " ";
+    }
+    document.getElementById("forNumbers").innerText = forNumbers;
+
+    let whileNumbers = "";
+    let count = 0;
+    while (count < 6) {
+      let num = getRandomNumber();
+      console.log(num);
+      whileNumbers += num + " ";
+      count++;
+    }
+    document.getElementById("whileNumbers").innerText = whileNumbers;
+  </script>
+
+</body>
+</html>
